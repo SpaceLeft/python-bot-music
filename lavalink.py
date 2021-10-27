@@ -1,27 +1,21 @@
-
-from os import system, environ
+from os import getenv, system
 
 
 class lavalinkserver:
-
     def __init__(self):
         self.download_command = "wget -qi https://github.com/freyacodes/Lavalink/releases/download/3.4/Lavalink.jar"
-        self.change_port = 'sed -i "s|DYNAMICPORT|$PORT|" application.yml'
-        self.change_password = 'sed -i "s|DYNAMICPASSWORD|$PASSWORD|" application.yml'
-        self.no_password = 'sed -i "s|DYNAMICPASSWORD|youshallnotpass|" application.yml'
-        self.additional = environ.get("ADDITIONAL_JAVA_OPTIONS")
-        self.run_command = f"java -jar Lavalink.jar {self.additional}"
+        self.change_port = 'sed -i "s|DYNAMICPORT|{}|" application.yml'.format(getenv('PORT'))
+        #self.change_password = 'sed -i "s|DYNAMICPASSWORD||" application.yml'
+        #self.no_password = 'sed -i "s|DYNAMICPASSWORD|youshallnotpass|" application.yml'
+        #self.additional = environ.get("ADDITIONAL_JAVA_OPTIONS")
+        self.run_command = "java -jar Lavalink.jar"
 
     def password_and_port(self):
-        print("[INFO] Changing the port and password ...")
+        print("[INFO] Changing the port ...")
         try:
             system(self.change_port)
-            if not environ.get("PASSWORD"):
-               print("[INFO] Default password has been set ...")
-               return system(self.no_password)
-            system(self.change_password)
         except BaseException as exc:
-            print(f"[ERROR] Error changing port AND password ... Info: {exc}")
+            print(f"[ERROR] Error changing port ... Info: {exc}")
         else:
             print("[INFO] Successfully changed Port and Password...")
 
@@ -31,7 +25,6 @@ class lavalinkserver:
             system(self.download_command)
         except BaseException as exc:
             print(f"[ERROR] Error downloading Lavalink... Info: {exc}")
-
         else:
             print("[INFO] Success in downloading Lavalink...")
     
