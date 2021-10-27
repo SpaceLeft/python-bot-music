@@ -9,13 +9,13 @@ lavalink:
     password: "iq898989"
     sources:
       youtube: true
-      bandcamp: true
-      soundcloud: true
+      bandcamp: false
+      soundcloud: false
       twitch: false
       vimeo: false
       mixer: false
-      http: true
-      local: true
+      http: false
+      local: false
     bufferDurationMs: 400
     youtubePlaylistLoadLimit: 3
     youtubeSearchEnabled: true
@@ -33,7 +33,7 @@ sentry:
 logging:
   file:
     max-history: 1
-    max-size: 10KB
+    max-size: 1MB
   path: /app/logs/
 
   level:
