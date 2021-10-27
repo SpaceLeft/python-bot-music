@@ -6,16 +6,16 @@ spring:
     banner-mode: log
 lavalink:
   server:
-    password: "DYNAMICPASSWORD"
+    password: "iq898989"
     sources:
       youtube: true
-      bandcamp: false
-      soundcloud: false
+      bandcamp: true
+      soundcloud: true
       twitch: false
       vimeo: false
       mixer: false
-      http: false
-      local: false
+      http: true
+      local: true
     bufferDurationMs: 400
     youtubePlaylistLoadLimit: 3
     youtubeSearchEnabled: true
@@ -33,7 +33,7 @@ sentry:
 logging:
   file:
     max-history: 1
-    max-size: 3MB
+    max-size: 10KB
   path: /app/logs/
 
   level:
