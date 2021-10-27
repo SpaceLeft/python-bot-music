@@ -15,7 +15,7 @@ else:
 
 print("[INFO] Downloading Latest Lavalink ...")
 try:
-    urllib.request.retrieve("https://github.com/freyacodes/Lavalink/releases/download/3.4/Lavalink.jar", filename='Lavalink.jar')
+    urllib.request.urlretrieve("https://github.com/freyacodes/Lavalink/releases/download/3.4/Lavalink.jar", filename='Lavalink.jar')
 except BaseException as exc:
     print(f"[ERROR] Error downloading Lavalink... Info: {exc}")
 else:
