@@ -20,7 +20,6 @@ lavalink:
     soundcloudSearchEnabled: false
     gc-warnings: true
     ratelimit:
-      strategy: "LoadBalance"
       retryLimit: 3
 
 metrics:
