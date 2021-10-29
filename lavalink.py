@@ -1,9 +1,7 @@
 from os import getenv
-from subprocess import run
+from subprocess import Popen
 from urllib.request import urlretrieve
 from re import sub
-from time import sleep
-
 
 print("[INFO] Changing the port ...")
 try:
@@ -24,8 +22,6 @@ else:
     print("[INFO] Success in downloading Lavalink...")
     
 try:
-    run('java -jar Lavalink.jar', shell=True)
+    Popen('java -jar Lavalink.jar', shell=True)
 except:
     print(f"[ERROR] Failed to start Lavalink server... Info: {exc}")
-
-sleep(10)
