@@ -8,14 +8,14 @@ lavalink:
       youtube: true
       bandcamp: true
       soundcloud: true
-      twitch: true
-      vimeo: true
+      twitch: false
+      vimeo: false
       http: true
       local: false
-    bufferDurationMs: 400
-    frameBufferDurationMs: 5000
-    youtubePlaylistLoadLimit: 100
-    playerUpdateInterval: 10
+    bufferDurationMs: 1000
+    frameBufferDurationMs: 10000
+    youtubePlaylistLoadLimit: 1
+    playerUpdateInterval: 30
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: false
     gc-warnings: true
@@ -35,7 +35,7 @@ sentry:
 logging:
   file:
     max-history: 0
-    max-size: 1MB
+    max-size: 0KB
   path: ./logs/
 
   level:
