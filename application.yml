@@ -1,26 +1,27 @@
 server:
   port: DYNAMICPORT
   address: 0.0.0.0
-spring:
-  main:
-    banner-mode: log
 lavalink:
   server:
     password: "iq898989"
     sources:
       youtube: true
-      bandcamp: false
-      soundcloud: false
-      twitch: false
-      vimeo: false
-      mixer: false
-      http: false
+      bandcamp: true
+      soundcloud: true
+      twitch: true
+      vimeo: true
+      http: true
       local: false
     bufferDurationMs: 400
-    youtubePlaylistLoadLimit: 3
+    frameBufferDurationMs: 5000
+    youtubePlaylistLoadLimit: 100
+    playerUpdateInterval: 10
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: false
     gc-warnings: true
+    ratelimit:
+      strategy: "LoadBalance"
+      retryLimit: 3
 
 metrics:
   prometheus:
@@ -29,12 +30,13 @@ metrics:
 
 sentry:
   dsn: ""
+  environment: ""
 
 logging:
   file:
-    max-history: 1
+    max-history: 0
     max-size: 1MB
-  path: /app/logs/
+  path: ./logs/
 
   level:
     root: INFO
