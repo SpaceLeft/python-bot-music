@@ -1,5 +1,5 @@
-from os import getenv
-from subprocess import Popen
+from os import getenv, system
+#from subprocess import Popen
 from urllib.request import urlretrieve
 from re import sub
 
@@ -22,6 +22,6 @@ else:
     print("[INFO] Success in downloading Lavalink...")
     
 try:
-    Popen('java -jar Lavalink.jar', shell=True)
+    system('java -jar Lavalink.jar')
 except:
     print(f"[ERROR] Failed to start Lavalink server... Info: {exc}")
