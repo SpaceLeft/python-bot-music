@@ -1,9 +1,9 @@
 server:
-  port: DYNAMICPORT
+  port: REPLACEPORT
   address: 0.0.0.0
 lavalink:
   server:
-    password: "iq898989"
+    password: REPLACEPASSWORD
     sources:
       youtube: true
       bandcamp: true
@@ -15,7 +15,7 @@ lavalink:
     bufferDurationMs: 10000
     frameBufferDurationMs: 10000
     youtubePlaylistLoadLimit: 1
-    playerUpdateInterval: 5
+    playerUpdateInterval: 60
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: false
     gc-warnings: true
