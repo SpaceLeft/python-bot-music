@@ -6,7 +6,8 @@ from re import sub
 print("[INFO] Changing the port ...")
 try:
     temp = open('application.yml', 'r').read()
-    temp = sub('DYNAMICPORT', getenv('PORT'), temp)
+    temp = sub('REPLACEPORT', getenv('PORT'), temp)
+    temp = sub('REPLACEPASSWORD', getenv('PASSWORD'), temp)
     open('application.yml', 'w').write(temp)
 except BaseException as exc:
     print(f"[ERROR] Error changing port ... Info: {exc}")
