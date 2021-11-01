@@ -23,6 +23,6 @@ else:
     print("[INFO] Success in downloading Lavalink...")
     
 try:
-    system('java -jar Lavalink.jar -d64 -Xmx512m -Xms400m -XX:MetaspaceSize=400m -XX:MaxMetaspaceSize=512m -XX:ThreadStackSize=5m -XX:+AggressiveOpts -XX:CICompilerCount=4 -XX:FlightRecorderOptions=globalbuffersize=200m,threadbuffersize=50m -XX:MaxDirectMemorySize=50m')
+    system('java -jar Lavalink.jar -Xmx512m -Xms400m -XX:+AggressiveOpts')
 except:
     print(f"[ERROR] Failed to start Lavalink server... Info: {exc}")
