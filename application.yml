@@ -12,8 +12,8 @@ lavalink:
       vimeo: false
       http: true
       local: false
-    bufferDurationMs: 1000
-    frameBufferDurationMs: 1000
+    bufferDurationMs: 2000
+    frameBufferDurationMs: 5000
     youtubePlaylistLoadLimit: 1
     playerUpdateInterval: 60
     youtubeSearchEnabled: true
