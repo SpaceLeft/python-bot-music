@@ -12,8 +12,8 @@ lavalink:
       vimeo: false
       http: true
       local: false
-    bufferDurationMs: 2000
-    frameBufferDurationMs: 10000
+    bufferDurationMs: 500 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
+    frameBufferDurationMs: 5000 # How many milliseconds of audio to keep buffered
     youtubePlaylistLoadLimit: 1
     playerUpdateInterval: 60
     youtubeSearchEnabled: true
