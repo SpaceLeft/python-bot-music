@@ -23,6 +23,6 @@ else:
     print("[INFO] Success in downloading Lavalink...")
     
 try:
-    system('java -jar Lavalink.jar -Xmx512m -Xms100m -Xss1m -XX:+UseContainerSupport -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -XX:+AggressiveOpts')
+    system('java -jar Lavalink.jar -Xmx512m -Xms512m -XX:+UseContainerSupport -XX:CICompilerCount=2 -Dfile.encoding=UTF-8 -XX:+AggressiveOpts')
 except:
     print(f"[ERROR] Failed to start Lavalink server... Info: {exc}")
