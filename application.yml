@@ -12,7 +12,7 @@ lavalink:
       vimeo: false
       http: true
       local: false
-    bufferDurationMs: 400 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
+    bufferDurationMs: 2000 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
     frameBufferDurationMs: 5000 # How many milliseconds of audio to keep buffered
     youtubePlaylistLoadLimit: 10
     playerUpdateInterval: 30
@@ -34,7 +34,7 @@ sentry:
 
 logging:
   file:
-    max-history: 1
+    max-history: 0
     max-size: 1MB
   path: ./logs/
 
