@@ -12,16 +12,16 @@ lavalink:
       vimeo: false
       http: true
       local: false
-    bufferDurationMs: 2000 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
-    frameBufferDurationMs: 60000 # How many milliseconds of audio to keep buffered
-    youtubePlaylistLoadLimit: 10
+    bufferDurationMs: 2500 # The duration of the NAS buffer. Higher values fare better against longer GC pauses
+    frameBufferDurationMs: 10000 # How many milliseconds of audio to keep buffered
+    youtubePlaylistLoadLimit: 1
     playerUpdateInterval: 30
     youtubeSearchEnabled: true
     soundcloudSearchEnabled: false
     gc-warnings: true
     ratelimit:
       retryLimit: 3
-      #strategy: "RotateOnBan" # RotateOnBan | LoadBalance | NanoSwitch | RotatingNanoSwitch
+      #strategy: "LoadBalance" # RotateOnBan | LoadBalance | NanoSwitch | RotatingNanoSwitch
 
 metrics:
   prometheus:
